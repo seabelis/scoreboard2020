@@ -11,7 +11,7 @@ export default class Player extends Component {
   render() {
     return (
       <li className = "player">
-        <p className = "name">{this.props.name</p>
+        <p className = "name">{this.props.name}</p>
       </li>
     )
   }
