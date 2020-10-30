@@ -36,7 +36,24 @@ render() {
       name={player.name}
       score={player.score}
       key={player.id}
+      incrementScore={this.incrementScoreOfPlayer}
       />
     )
+  }
+
+  incrementScoreOfPlayer = id => {
+    // Making a new array with the same objects except for the
+    //  one that should be updated,
+    const updatedPlayers = this.state.players.map(player => {
+      if (player.id === id) {
+        // ...which we replace with a copy of the original,
+        //  except for the property `score` which is incremented
+        return { ...player, score: player.score + 1 };
+      } else {
+        return player;
+      }
+    });
+    // Finally, we use `this.setState` to replace the players array
+    this.setState({ players: updatedPlayers });
   }
 }
