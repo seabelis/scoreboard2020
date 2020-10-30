@@ -1,6 +1,7 @@
 // components/Scoreboard.js
 
 import React, { Component } from "react";
+import AddPlayer from "./AddPlayer";
 import Player from "./Player";
 import "./Scoreboard.css";
 
@@ -26,6 +27,7 @@ render() {
       <ul>
         {players_copy.map(this.renderPlayer)}
       </ul>
+      <AddPlayer />
     </div>
   );
   }
