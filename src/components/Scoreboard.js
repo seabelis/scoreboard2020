@@ -2,6 +2,7 @@
 
 import React, { Component } from "react";
 import Player from "./Player";
+import "./Scoreboard.css";
 
 export default class Scoreboard extends Component {
   state = {
