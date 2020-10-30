@@ -1,1 +1,1 @@
-React Exercise: https://condescending-kalam-feac0c.netlify.app/
+React Exercise: https://lisas-react-scoreboard.netlify.app/
