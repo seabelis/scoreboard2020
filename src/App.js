@@ -6,7 +6,7 @@ import "./App.css";
 function App() {
   return (
     <main>
-      <Title content="Title" /> 
+      {/* <Title content="Title" />  */}
       <Scoreboard />
     </main>
   );
