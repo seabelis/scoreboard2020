@@ -27,7 +27,7 @@ render() {
       <ul>
         {players_copy.map(this.renderPlayer)}
       </ul>
-      <AddPlayer />
+      <AddPlayer addPlayer={this.addPlayer} />
     </div>
   );
   }
@@ -58,5 +58,16 @@ render() {
     });
     // Finally, we use `this.setState` to replace the players array
     this.setState({ players: updatedPlayers });
+  }
+
+  addPlayer = (name) => {
+    const player = {
+      id: Math.round(Math.random()*100000),
+      name,
+      score: 0
+    }
+    this.setState({
+      players: this.state.players.concat(player)
+    })
   }
 }
